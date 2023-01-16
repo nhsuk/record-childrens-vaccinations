@@ -21,4 +21,6 @@ class Child < ApplicationRecord
   enum :screening, ['Approved for vaccination']
   enum :consent, ['Parental consent (digital)']
   enum :seen, ['Not yet']
+
+  has_and_belongs_to_many :campaigns
 end
