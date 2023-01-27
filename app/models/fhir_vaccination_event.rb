@@ -31,7 +31,7 @@ class FHIRVaccinationEvent
   end
 
   def brand
-    @entry.vaccineCode.coding.first.display
+    @entry.manufacturer&.name
   end
 
   def batch

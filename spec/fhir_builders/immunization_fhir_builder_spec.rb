@@ -52,6 +52,10 @@ RSpec.describe ImmunizationFHIRBuilder do
           "recorded": "2023-01-25",
           "primarySource": true,
           "lotNumber": "808",
+          "manufacturer": {
+            "name": "Merck Sharp & Dohme (UK) Ltd",
+            "resourceType": "Organization"
+          },
           "expirationDate": "2023-01-31",
           "site": {
             "coding": [

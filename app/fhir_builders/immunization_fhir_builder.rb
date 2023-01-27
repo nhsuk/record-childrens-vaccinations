@@ -131,6 +131,12 @@ class ImmunizationFHIRBuilder
     )
   end
 
+  def manufacturer
+    FHIR::Organization.new(
+      name: "Merck Sharp & Dohme (UK) Ltd"
+    )
+  end
+
   def immunization
     @immunization ||=
       FHIR::Immunization.new.tap do |imm|
@@ -140,6 +146,7 @@ class ImmunizationFHIRBuilder
         imm.identifier << identifier
         imm.patient = patient
         imm.doseQuantity = dose_quantity
+        imm.manufacturer = manufacturer
         imm.lotNumber = "808"
         imm.primarySource = true
         imm.reasonCode << reason_code
